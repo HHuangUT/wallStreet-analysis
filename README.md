@@ -74,12 +74,14 @@ The two versions of code acomplish the same thing but go through different paths
 
 >**Refactored Code:** scan each row, process data for all indexes in 1 spot, output when all rows scanned
 
-By storing the data in 1 location for ALL the indexes, the reformatted code saves time over each iteration by not having to bounce back and forth to clean out/overwrite the old index data. This is directly shown by the improved runtimes:
+**Benefit of Original Code:** The original is easy to follow (even without the comments) because it follows a path similar to how one would perform the analysis by hand.
+
+**Benefit of Refactored Code:** By storing the data in 1 location for ALL the indexes, the reformatted code saves time over each iteration by not having to bounce back and forth to clean out/overwrite the old index data. This is directly shown by the improved runtimes:
 ```
   2017 Average Difference (sec):		-0.492
   2018 Average Difference (sec):		-0.484
 ```
-In addition, by storing as an array that is initiallized at the beginning of the script, the user can easily edit the script to include more/less indexes, and/or reformat again for additional features- improving scalability.
+In addition, by storing as an array that is initiallized at the beginning of the script, the user can easily edit the script to include more/less indexes, and/or refactor again for additional features- improving scalability.
 
 
 
